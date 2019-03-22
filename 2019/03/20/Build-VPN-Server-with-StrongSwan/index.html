@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="研究ipsec.conf文件中各个配置选项的准确含义；研究ipsec.secrets文件中各个配置项的准确含义；使用sudo ipsec statusall命令查看状态；">
+  <meta name="description" content="研究ipsec.conf文件中各个配置选项的准确含义；研究ipsec.secrets文件中各个配置项的准确含义；使用sudo ipsec statusall命令查看状态； 尝试：配置额外的网口，为其配置dhcp服务，与虚拟IP池使用同网段配置注意：iptables对于“eth0”的配置，可能决定了虚拟ip转发的使能状态注意：客户端的根CA证书应当确保正确安装注意：ipsec.conf在/usr/l">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Build VPN Server with StrongSwan">
 <meta property="og:url" content="http://yoursite.com/2019/03/20/Build-VPN-Server-with-StrongSwan/index.html">
 <meta property="og:site_name" content="探索世界的老王">
-<meta property="og:description" content="研究ipsec.conf文件中各个配置选项的准确含义；研究ipsec.secrets文件中各个配置项的准确含义；使用sudo ipsec statusall命令查看状态；">
+<meta property="og:description" content="研究ipsec.conf文件中各个配置选项的准确含义；研究ipsec.secrets文件中各个配置项的准确含义；使用sudo ipsec statusall命令查看状态； 尝试：配置额外的网口，为其配置dhcp服务，与虚拟IP池使用同网段配置注意：iptables对于“eth0”的配置，可能决定了虚拟ip转发的使能状态注意：客户端的根CA证书应当确保正确安装注意：ipsec.conf在/usr/l">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-21T02:37:02.320Z">
+<meta property="og:updated_time" content="2019-03-22T14:26:34.665Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build VPN Server with StrongSwan">
-<meta name="twitter:description" content="研究ipsec.conf文件中各个配置选项的准确含义；研究ipsec.secrets文件中各个配置项的准确含义；使用sudo ipsec statusall命令查看状态；">
+<meta name="twitter:description" content="研究ipsec.conf文件中各个配置选项的准确含义；研究ipsec.secrets文件中各个配置项的准确含义；使用sudo ipsec statusall命令查看状态； 尝试：配置额外的网口，为其配置dhcp服务，与虚拟IP池使用同网段配置注意：iptables对于“eth0”的配置，可能决定了虚拟ip转发的使能状态注意：客户端的根CA证书应当确保正确安装注意：ipsec.conf在/usr/l">
 
 
 
@@ -348,7 +348,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-21 10:37:02" itemprop="dateModified" datetime="2019-03-21T10:37:02+08:00">2019-03-21</time>
+                <time title="Modified: 2019-03-22 22:26:34" itemprop="dateModified" datetime="2019-03-22T22:26:34+08:00">2019-03-22</time>
               
             
           </span>
@@ -383,6 +383,7 @@
 
       
         <p>研究ipsec.conf文件中各个配置选项的准确含义；<br>研究ipsec.secrets文件中各个配置项的准确含义；<br>使用sudo ipsec statusall命令查看状态；</p>
+<p>尝试：配置额外的网口，为其配置dhcp服务，与虚拟IP池使用同网段配置<br>注意：iptables对于“eth0”的配置，可能决定了虚拟ip转发的使能状态<br>注意：客户端的根CA证书应当确保正确安装<br>注意：ipsec.conf在/usr/local/etc/下，排查/etc/下的同名文件，如果同时存在会造成干扰<br>注意：ipsec.secrets在配ipv6时要相应加%any6%；具体的语法<br>待定：通道建立之后如何通过vpn服务器上网</p>
 
       
     </div>
