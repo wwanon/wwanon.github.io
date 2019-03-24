@@ -347,7 +347,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-24 10:44:10" itemprop="dateModified" datetime="2019-03-24T10:44:10+08:00">2019-03-24</time>
+                <time title="Modified: 2019-03-24 11:48:40" itemprop="dateModified" datetime="2019-03-24T11:48:40+08:00">2019-03-24</time>
               
             
           </span>
@@ -384,7 +384,7 @@
         
           
             <p>研究ipsec.conf文件中各个配置选项的准确含义；<br>研究ipsec.secrets文件中各个配置项的准确含义；<br>使用sudo ipsec statusall命令查看状态；</p>
-<p>尝试：配置额外的网口，为其配置dhcp服务，与虚拟IP池使用同网段配置<br>注意：iptables对于“eth0”的配置，可能决定了虚拟ip转发的使能状态<br>注意：客户端的根CA证书应当确保正确安装<br>注意：ipsec.conf在/usr/local/etc/下，排查/etc/下的同名文件，如果同时存在会造成干扰<br>注意：ipsec.secrets在配ipv6时要相应加%any6%；具体的语法<br>注意：ipv6下，Server侧相应的sysctl.conf配置也要调整，首先至少要打开ipv6 forwarding<br>待定：通道建立之后如何通过vpn服务器上网</p>
+<p>尝试：配置额外的网口，为其配置dhcp服务，与虚拟IP池使用同网段配置<br>注意：iptables对于“eth0”的配置，可能决定了虚拟ip转发的使能状态<br>注意：客户端的根CA证书应当确保正确安装<br>注意：ipsec.conf在/usr/local/etc/下，排查/etc/下的同名文件，如果同时存在会造成干扰<br>注意：ipsec.secrets在配ipv6时要相应加%any6%；具体的语法<br>注意：ipv6下，Server侧相应的sysctl.conf配置也要调整，首先至少要打开ipv6 forwarding<br>待定：通道建立之后如何通过vpn服务器上网<br>注意：ipv6客户端虚拟网络设备默认使用远端的（服务器侧）的指定网关，如果这个网关不可用，将导致客户端无法上网（如ping外网）；但是能够ping通内网，是因为不需要经过网关。</p>
 
           
         
