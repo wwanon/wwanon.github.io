@@ -347,7 +347,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-24 15:35:25" itemprop="dateModified" datetime="2019-03-24T15:35:25+08:00">2019-03-24</time>
+                <time title="Modified: 2019-03-24 17:40:34" itemprop="dateModified" datetime="2019-03-24T17:40:34+08:00">2019-03-24</time>
               
             
           </span>
@@ -384,7 +384,7 @@
         
           
             <p>研究ipsec.conf文件中各个配置选项的准确含义；<br>研究ipsec.secrets文件中各个配置项的准确含义；<br>使用sudo ipsec statusall命令查看状态；</p>
-<p>尝试：配置额外的网口，为其配置dhcp服务，与虚拟IP池使用同网段配置<br>注意：iptables对于“eth0”的配置，可能决定了虚拟ip转发的使能状态<br>注意：客户端的根CA证书应当确保正确安装<br>注意：ipsec.conf在/usr/local/etc/下，排查/etc/下的同名文件，如果同时存在会造成干扰<br>注意：ipsec.secrets在配ipv6时要相应加%any6%；具体的语法<br>注意：ipv6下，Server侧相应的sysctl.conf配置也要调整，首先至少要打开ipv6 forwarding<br>待定：通道建立之后如何通过vpn服务器上网<br>注意：ipv6客户端虚拟网络设备默认使用远端的（服务器侧）的指定网关，如果这个网关不可用，将导致客户端无法上网（如ping外网）；但是能够ping通内网，是因为不需要经过网关。<br>知悉：vpn设备向数据包添加header，指定其使用何种方式被vpn设备处理<br>注意：ufw和iptables是两码事，运行ufw disable不会关掉iptables；ufw仅仅是简化iptables配置的一个配置工具，且在ubuntu中是默认为disable的。因此，ipv6下的iptable也需要相应调整配置。<br>注意：ipv6下gateway的转发、路由相关的配置注意事项，参见<a href="https://wiki.strongswan.org/projects/strongswan/wiki/ForwardingAndSplitTunneling" target="_blank" rel="noopener">https://wiki.strongswan.org/projects/strongswan/wiki/ForwardingAndSplitTunneling</a></p>
+<p>尝试：配置额外的网口，为其配置dhcp服务，与虚拟IP池使用同网段配置<br>注意：iptables对于“eth0”的配置，可能决定了虚拟ip转发的使能状态<br>注意：客户端的根CA证书应当确保正确安装<br>注意：ipsec.conf在/usr/local/etc/下，排查/etc/下的同名文件，如果同时存在会造成干扰<br>注意：ipsec.secrets在配ipv6时要相应加%any6%；具体的语法<br>注意：ipv6下，Server侧相应的sysctl.conf配置也要调整，首先至少要打开ipv6 forwarding<br>待定：通道建立之后如何通过vpn服务器上网<br>注意：ipv6客户端虚拟网络设备默认使用远端的（服务器侧）的指定网关，如果这个网关不可用，将导致客户端无法上网（如ping外网）；但是能够ping通内网，是因为不需要经过网关。<br>知悉：vpn设备向数据包添加header，指定其使用何种方式被vpn设备处理<br>注意：ufw和iptables是两码事，运行ufw disable不会关掉iptables；ufw仅仅是简化iptables配置的一个配置工具，且在ubuntu中是默认为disable的。因此，ipv6下的iptable也需要相应调整配置。<br>注意：ipv6下gateway的转发、路由相关的配置注意事项，参见<a href="https://wiki.strongswan.org/projects/strongswan/wiki/ForwardingAndSplitTunneling" target="_blank" rel="noopener">https://wiki.strongswan.org/projects/strongswan/wiki/ForwardingAndSplitTunneling</a><br>待定：win10客户端所显示的服务器ipv6地址（虚拟网段）为xx::,意味着最后为0，这说明服务端自身的虚拟地址没配好？<br>知悉：ipsec.conf中，一般left代表本侧，right代表对侧。</p>
 
           
         
