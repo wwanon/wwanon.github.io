@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="探索世界的老王">
 <meta property="og:description" content="研究ipsec.conf文件中各个配置选项的准确含义；研究ipsec.secrets文件中各个配置项的准确含义；使用sudo ipsec statusall命令查看状态；">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-26T08:15:39.640Z">
+<meta property="og:updated_time" content="2019-03-26T09:05:25.587Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build VPN Server with StrongSwan">
 <meta name="twitter:description" content="研究ipsec.conf文件中各个配置选项的准确含义；研究ipsec.secrets文件中各个配置项的准确含义；使用sudo ipsec statusall命令查看状态；">
@@ -348,7 +348,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-26 16:15:39" itemprop="dateModified" datetime="2019-03-26T16:15:39+08:00">2019-03-26</time>
+                <time title="Modified: 2019-03-26 17:05:25" itemprop="dateModified" datetime="2019-03-26T17:05:25+08:00">2019-03-26</time>
               
             
           </span>
@@ -397,7 +397,10 @@
         this-&gt;ike_sa-&gt;set_condition(this-&gt;ike_sa, COND_NAT_FAKE, TRUE);
     }
 }
-</code></pre>
+
+charon (11127) started after 40 ms
+</code></pre><p>08[IKE] 2400:dd01:1001:151::eeef is initiating an IKE_SA<br>08[IKE] IKE_SA (unnamed)[1] state change: CREATED =&gt; CONNECTING<br>08[IKE] natd_chunk =&gt; 34 bytes @ 0x7f7f240039f0<br>08[IKE]    0: 0B 35 A7 F2 5C 36 D7 07 00 00 00 00 00 00 00 00  .5..\6……….<br>08[IKE]   16: 24 00 DD 01 10 01 01 51 00 00 00 00 00 00 EE EE  $……Q……..<br>08[IKE]   32: 01 F4                                            ..<br>08[IKE] natd_hash =&gt; 20 bytes @ 0x7f7f240041b0<br>08[IKE]    0: E1 85 B6 B5 CB A6 76 30 67 F8 CF 30 A6 02 FB 88  ……v0g..0….<br>08[IKE]   16: 88 81 0A F5                                      ….<br>08[IKE] natd_chunk =&gt; 34 bytes @ 0x7f7f240039f0<br>08[IKE]    0: 0B 35 A7 F2 5C 36 D7 07 00 00 00 00 00 00 00 00  .5..\6……….<br>08[IKE]   16: 24 00 DD 01 10 01 01 51 00 00 00 00 00 00 EE EF  $……Q……..<br>08[IKE]   32: 01 F4                                            ..<br>08[IKE] natd_hash =&gt; 20 bytes @ 0x7f7f24003690<br>08[IKE]    0: 32 69 01 86 A9 AE E5 10 03 85 00 C9 27 07 03 1A  2i……….’…<br>08[IKE]   16: D7 65 92 22                                      .e.”<br>08[IKE] precalculated src_hash =&gt; 20 bytes @ 0x7f7f24003690<br>08[IKE]    0: 32 69 01 86 A9 AE E5 10 03 85 00 C9 27 07 03 1A  2i……….’…<br>08[IKE]   16: D7 65 92 22                                      .e.”<br>08[IKE] precalculated dst_hash =&gt; 20 bytes @ 0x7f7f240041b0<br>08[IKE]    0: E1 85 B6 B5 CB A6 76 30 67 F8 CF 30 A6 02 FB 88  ……v0g..0….<br>08[IKE]   16: 88 81 0A F5                                      ….<br>08[IKE] received src_hash =&gt; 20 bytes @ 0x7f7f24002a90<br>08[IKE]    0: 40 0F A3 36 D1 30 8A 9C 73 B8 03 FD 60 0C 7E 1A  @..6.0..s…`.~.<br>08[IKE]   16: 36 03 99 79                                      6..y<br>08[IKE] received dst_hash =&gt; 20 bytes @ 0x7f7f24002bb0<br>08[IKE]    0: E1 85 B6 B5 CB A6 76 30 67 F8 CF 30 A6 02 FB 88  ……v0g..0….<br>08[IKE]   16: 88 81 0A F5                                      ….<br>08[IKE] remote host is behind NAT</p>
+
       
     </div>
 
