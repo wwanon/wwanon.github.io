@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="探索世界的老王">
 <meta property="og:description" content="研究ipsec.conf文件中各个配置选项的准确含义；研究ipsec.secrets文件中各个配置项的准确含义；使用sudo ipsec statusall命令查看状态；">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-26T13:14:55.947Z">
+<meta property="og:updated_time" content="2019-03-27T01:22:02.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build VPN Server with StrongSwan">
 <meta name="twitter:description" content="研究ipsec.conf文件中各个配置选项的准确含义；研究ipsec.secrets文件中各个配置项的准确含义；使用sudo ipsec statusall命令查看状态；">
@@ -348,7 +348,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-26 21:14:55" itemprop="dateModified" datetime="2019-03-26T21:14:55+08:00">2019-03-26</time>
+                <time title="Modified: 2019-03-27 09:22:02" itemprop="dateModified" datetime="2019-03-27T09:22:02+08:00">2019-03-27</time>
               
             
           </span>
@@ -399,7 +399,7 @@
         this-&gt;ike_sa-&gt;set_condition(this-&gt;ike_sa, COND_NAT_FAKE, TRUE);
     }
 }
-</code></pre><p>其中，src_matched和dst_matched的判断，是在static void process_payloads(private_ike_natd_t <em>this, message_t </em>message)函数中进行的。</p>
+</code></pre><p>其中，src_matched和dst_matched的判断，是在static void process_payloads(private_ike_natd_t <em>this, message_t </em>message)函数中进行的。<br>isakmp_natd.c中对NAT-D Payloads进行了解析和处理。</p>
 
       
     </div>
