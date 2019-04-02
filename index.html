@@ -285,6 +285,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/How-Is-a-Process-Created/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content>
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探索世界的老王">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/02/How-Is-a-Process-Created/" class="post-title-link" itemprop="url">How Is a Process Created</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-02 15:25:24 / Modified: 15:26:01" itemprop="dateCreated datePublished" datetime="2019-04-02T15:25:24+08:00">2019-04-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>While this might be a little clumsy, you could say that. Creating a process takes two steps:</p>
+<pre><code>Allocate a u area (basically, information about the process that is accessible to the kernel), fill an entry in the process table, initialise all related components... basically, just create another process for the kernel to manage. This is done through the fork system call.
+
+Load an executable file into memory. This is done through the exec (now execve) system call. During this call, 3 main memory areas, called regions are filled:
+    The text region, which consists of a set of instructions your process is to follow : basically, your program. This is contained within your executable file (the compiler writes it based on your source code).
+    The data region, which contains your initialised data (variables with values, e.g. int myvar = 1) and enough space to hold unitialised data (called bss), such as an array (e.g. char buffer[256]).
+    The stack region. This part is a little trickier to explain, and as I said in a comment, Maurice J. Bach does it better than I ever would (chapter 2, section 2.2.2). Basically, the stack is a dynamic area in memory, which grows as functions are called, and shrinks as they return. When executing a program, frames corresponding to the main function are pushed onto the stack. These frames will be popped when the program terminates.
+</code></pre>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/02/How-Is-a-Process-Created/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/How-Computers-Work-The-CPU-and-Memory/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -623,7 +779,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
