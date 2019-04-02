@@ -330,7 +330,7 @@
                 
               
 
-              <time title="Created: 2019-04-02 15:25:24 / Modified: 15:29:36" itemprop="dateCreated datePublished" datetime="2019-04-02T15:25:24+08:00">2019-04-02</time>
+              <time title="Created: 2019-04-02 15:25:24 / Modified: 15:52:07" itemprop="dateCreated datePublished" datetime="2019-04-02T15:25:24+08:00">2019-04-02</time>
             
 
             
@@ -372,7 +372,11 @@
         
           <p>While this might be a little clumsy, you could say that. Creating a process takes two steps:</p>
 <p>Allocate a u area (basically, information about the process that is accessible to the kernel), fill an entry in the process table, initialise all related components… basically, just create another process for the kernel to manage. This is done through the fork system call.</p>
-<p>Load an executable file into memory. This is done through the exec (now execve) system call. During this call, 3 main memory areas, called regions are filled:<br>    The text region, which consists of a set of instructions your process is to follow : basically, your program. This is contained within your executable file (the compiler writes it based on your source code).<br>    The data region, which contains your initialised data (variables with values, e.g. int myvar = 1) and enough space to hold unitialised data (called bss), such as an array (e.g. char buffer[256]).<br>    The stack region. This part is a little trickier to explain, and as I said in a comment, Maurice J. Bach does it better than I ever would (chapter 2, section 2.2.2). Basically, the stack is a dynamic area in memory, which grows as functions are called, and shrinks as they return. When executing a program, frames corresponding to the main function are pushed onto the stack. These frames will be popped when the program terminates.<br>
+<p>Load an executable file into memory. This is done through the exec (now execve) system call. During this call, 3 main memory areas, called regions are filled:</p>
+<pre><code>The text region, which consists of a set of instructions your process is to follow : basically, your program. This is contained within your executable file (the compiler writes it based on your source code).
+The data region, which contains your initialised data (variables with values, e.g. int myvar = 1) and enough space to hold unitialised data (called bss), such as an array (e.g. char buffer[256]).
+The stack region. This part is a little trickier to explain, and as I said in a comment, Maurice J. Bach does it better than I ever would (chapter 2, section 2.2.2). Basically, the stack is a dynamic area in memory, which grows as functions are called, and shrinks as they return. When executing a program, frames corresponding to the main function are pushed onto the stack. These frames will be popped when the program terminates.
+</code></pre>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -384,7 +388,7 @@
           <!--/noindex-->
         
       
-    </p></div>
+    </div>
 
     
 
