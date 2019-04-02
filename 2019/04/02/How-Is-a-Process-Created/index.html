@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="探索世界的老王">
 <meta property="og:description" content="While this might be a little clumsy, you could say that. Creating a process takes two steps: Allocate a u area (basically, information about the process that is accessible to the kernel), fill an entr">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-02T07:26:01.951Z">
+<meta property="og:updated_time" content="2019-04-02T07:29:36.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How Is a Process Created">
 <meta name="twitter:description" content="While this might be a little clumsy, you could say that. Creating a process takes two steps: Allocate a u area (basically, information about the process that is accessible to the kernel), fill an entr">
@@ -331,7 +331,7 @@
                 
               
 
-              <time title="Created: 2019-04-02 15:25:24 / Modified: 15:26:01" itemprop="dateCreated datePublished" datetime="2019-04-02T15:25:24+08:00">2019-04-02</time>
+              <time title="Created: 2019-04-02 15:25:24 / Modified: 15:29:36" itemprop="dateCreated datePublished" datetime="2019-04-02T15:25:24+08:00">2019-04-02</time>
             
 
             
@@ -371,14 +371,8 @@
 
       
         <p>While this might be a little clumsy, you could say that. Creating a process takes two steps:</p>
-<pre><code>Allocate a u area (basically, information about the process that is accessible to the kernel), fill an entry in the process table, initialise all related components... basically, just create another process for the kernel to manage. This is done through the fork system call.
-
-Load an executable file into memory. This is done through the exec (now execve) system call. During this call, 3 main memory areas, called regions are filled:
-    The text region, which consists of a set of instructions your process is to follow : basically, your program. This is contained within your executable file (the compiler writes it based on your source code).
-    The data region, which contains your initialised data (variables with values, e.g. int myvar = 1) and enough space to hold unitialised data (called bss), such as an array (e.g. char buffer[256]).
-    The stack region. This part is a little trickier to explain, and as I said in a comment, Maurice J. Bach does it better than I ever would (chapter 2, section 2.2.2). Basically, the stack is a dynamic area in memory, which grows as functions are called, and shrinks as they return. When executing a program, frames corresponding to the main function are pushed onto the stack. These frames will be popped when the program terminates.
-</code></pre><a id="more"></a>
-<p>Now, while this might seem enough to run a program, it isn’t. Now that your process is running, the kernel still needs to maintain it. Quoting:</p>
+<p>Allocate a u area (basically, information about the process that is accessible to the kernel), fill an entry in the process table, initialise all related components… basically, just create another process for the kernel to manage. This is done through the fork system call.</p>
+<p>Load an executable file into memory. This is done through the exec (now execve) system call. During this call, 3 main memory areas, called regions are filled:<br>    The text region, which consists of a set of instructions your process is to follow : basically, your program. This is contained within your executable file (the compiler writes it based on your source code).<br>    The data region, which contains your initialised data (variables with values, e.g. int myvar = 1) and enough space to hold unitialised data (called bss), such as an array (e.g. char buffer[256]).<br>    The stack region. This part is a little trickier to explain, and as I said in a comment, Maurice J. Bach does it better than I ever would (chapter 2, section 2.2.2). Basically, the stack is a dynamic area in memory, which grows as functions are called, and shrinks as they return. When executing a program, frames corresponding to the main function are pushed onto the stack. These frames will be popped when the program terminates.<br><a id="more"></a><br>Now, while this might seem enough to run a program, it isn’t. Now that your process is running, the kernel still needs to maintain it. Quoting:</p>
 <pre><code>As outlined in Chapter 2, the lifetime of a process can be conceptually divided into a set of states that describe the process. (The Design of the UNIX Operating System, Maurice J. Bach, chapter 6 : the structure of processes).
 </code></pre><p>This means that your process will not always be “running”, nor will it always be in primary storage (what you call “RAM”). For instance:</p>
 <pre><code>If your process ever goes to sleep (because it is told to by its text, or because it is waiting for something), the kernel may decide to swap it out to secondary storage (usually a swap area). When this happens, your process is no longer in primary storage (&quot;in memory/RAM&quot;) : the kernel has saved it, and will be able to reschedule it once it&apos;s been loaded back into primary storage.
