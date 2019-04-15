@@ -285,6 +285,161 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/12/硬件中断与软件中断/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content>
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探索世界的老王">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/12/硬件中断与软件中断/" class="post-title-link" itemprop="url">硬件中断与软件中断</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-12 17:07:45" itemprop="dateCreated datePublished" datetime="2019-04-12T17:07:45+08:00">2019-04-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-15 10:05:29" itemprop="dateModified" datetime="2019-04-15T10:05:29+08:00">2019-04-15</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>中断定义：指当出现需要时，CPU暂时停止当前程序的执行转而执行处理新情况的程序和执行过程。<br>硬件中断，是由与系统相连的外设（如网卡、硬盘、键盘等）自动产生的。每个设备或设备集都有它自己的IRQ（中断请求），基于IRQ，CPU可以将相应的请求分发到相应的硬件驱动上（注：硬件驱动通常是内核中的一个子程序，而不是一个独立的进程）。处理中断的驱动是需要运行在CPU上的，因此，当中断产生时，CPU会暂时停止当前程序的程序转而执行中断请求。<br>软中断，不会直接中断CPU，也只有当前正在运行的代码（或进程）才会产生软中断。软中断是一种需要内核为正在运行的进程去做一些事情（通常为I/O）的请求。<br>硬件中断和软中断的区别<br>    硬件中断是由外设引发的，软中断是执行中断指令产生的。<br>    硬件中断的中断号是由中断控制器提供的，软中断的中断号由指令直接指出，无需使用中断控制器。<br>    硬件中断是可屏蔽的，软中断不可屏蔽。<br>    硬件中断处理程序要确保它能快速地完成任务，这样程序执行时才不会等待较长时间，称为上半部。<br>    软中断处理硬中断未完成的工作，是一种推后执行的机制，属于下半部。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/How-Is-a-Process-Created/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -778,7 +933,7 @@ The stack region. This part is a little trickier to explain, and as I said in a 
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
